@@ -17,15 +17,18 @@ h1 {
     color: #8c0;
 }
 
-input, button {
+input, button, select {
     font-family: "Roboto", sans-serif;
+    width: 10rem;
+    margin: .5rem 0;
+    padding: .25rem;
 }
 
 div, pre {
     margin:1rem;
 }
 
-div:has(input, button) {
+div:has(input, button, select) {
     display: inline-block;
 }
 
@@ -56,4 +59,8 @@ pre span.Rare {
 
 pre span.Uncommon {
     color: #09c;
+}
+
+pre span.Glamorous, pre span.Strong, pre span.Magic, pre span.Fast, pre span.Lucky {
+    font-weight: 600;
 }
