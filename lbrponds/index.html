@@ -18,7 +18,8 @@
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-        </select></div><br>
+        </select></div>
+        <div><button id="submit">Analyze</button></div><br>
         <div>Result count<br><select id="rescount">
             <option value="100">100</option>
             <option value="1000">1000</option>
@@ -35,7 +36,14 @@
             <option value="Magic">Magic</option>
             <option value="Strong">Strong</option>
         </select></div>
-        <div><button id="submit">Analyze</button></div>
+        <div>Filter out (un)common<br><select id="filterrarity">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select></div>
+        <div>Filter out regular<br><select id="filterregular">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select></div>
         <div id="nextleg"></div>
         <div>Your next searches:</div>
         <pre id="result"></pre>

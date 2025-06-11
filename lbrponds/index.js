@@ -33,6 +33,8 @@ function render() {
     const goggles = parseInt(document.querySelector('#goggles').value);
     const rescount = parseInt(document.querySelector('#rescount').value);
     const special = document.querySelector('#special').value;
+    const filterrarity = parseInt(document.querySelector('#filterrarity').value) === 1;
+    const filterregular = parseInt(document.querySelector('#filterregular').value) === 1;
 
     for (let i = 0; ; i++) {
         if (window.ponds[i + seed + searches][goggles].match(new RegExp("^Legendary:"+special))) {
@@ -41,5 +43,14 @@ function render() {
         }
     }
 
-    document.querySelector('#result').innerHTML = window.ponds.slice(seed + searches, rescount + seed + searches).map((v, k) => `<span class="${v[goggles].replace(':', ' ')}">${k + 1} (seed #${seed + searches + k}) - ${v[goggles].replace(':', ' ')}</span>`).join("");
+    var res = window.ponds.slice(seed + searches, rescount + seed + searches).map((v, k) => `<span class="${v[goggles].replace(':', ' ')}">${k + 1} (seed #${seed + searches + k}) - ${v[goggles].replace(':', ' ')}</span>`);
+
+    if (filterrarity) {
+        res = res.filter(v => !v.match(/\<span class="(Uncommon|Common)/));
+    }
+    if (filterregular) {
+        res = res.filter(v => !v.match(/\<span class="\w+ Regular/));
+    }
+
+    document.querySelector('#result').innerHTML = res.join("");
 }
