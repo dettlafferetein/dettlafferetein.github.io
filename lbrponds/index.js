@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
 
-        document.querySelector('#result').innerHTML = window.ponds.slice(seed + searches, 1000).map((v, k) => `<span class="${v.replace(/:\w+$/g, '')}">${k + 1} (seed #${seed + searches + k}) - ${v.replace(':', ' ')}</span>`).join("");
+        document.querySelector('#result').innerHTML = window.ponds.slice(seed + searches, 1000 + seed + searches).map((v, k) => `<span class="${v.replace(/:\w+$/g, '')}">${k + 1} (seed #${seed + searches + k}) - ${v.replace(':', ' ')}</span>`).join("");
     });
 });
