@@ -36,7 +36,7 @@ function render() {
 
     for (let i = 0; ; i++) {
         if (window.ponds[i + seed + searches][goggles].match(new RegExp("^Legendary:"+special))) {
-            document.querySelector('#nextleg').textContent = `Your next ${special.length ? special + ' ' : ''}Legendary is ${window.ponds[i + seed + searches][goggles].replace(/^Legendary:/g, '')} in ${i + 1} searches`;
+            document.querySelector('#nextleg').textContent = `Your next ${special.length ? special + ' Legendary is' : 'Legendary is ' + window.ponds[i + seed + searches][goggles].replace(/^Legendary:/g, '')} in ${i + 1} searches`;
             break;
         }
     }
