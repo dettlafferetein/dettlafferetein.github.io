@@ -20,16 +20,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></div>
-        <div><button id="submit">Analyze</button></div><br>
-        <div>Result count<br><select id="rescount">
-            <option value="100">100</option>
-            <option value="1000">1000</option>
-            <option value="5000">5000</option>
-            <option value="10000">10000</option>
-            <option value="50000">50000</option>
-            <option value="100000">100000</option>
-        </select></div>
-        <div>Special type<br><select id="special">
+        <div>Next legendary type<br><select id="special">
             <option value="">Any</option>
             <option value="Fast">Fast</option>
             <option value="Glamorous">Glamorous</option>
@@ -37,14 +28,27 @@
             <option value="Magic">Magic</option>
             <option value="Strong">Strong</option>
         </select></div>
-        <div>Filter out (un)common<br><select id="filterrarity">
-            <option value="0">No</option>
-            <option value="1">Yes</option>
+        <div>Display next searches<br><select id="rescount">
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+            <option value="5000">5000</option>
+            <option value="10000">10000</option>
+            <option value="50000">50000</option>
+            <option value="100000">100000</option>
         </select></div>
-        <div>Filter out regular<br><select id="filterregular">
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-        </select></div>
+        <div><button id="submit">Analyze</button></div><br>
+        <div class="Legendary" style="line-height: 1.5rem;"><input type="checkbox" checked id="filterleg"> Legendary</div>
+        <div class="Mythical" style="line-height: 1.5rem;"><input type="checkbox" checked id="filtermyth"> Mythical</div>
+        <div class="Epic" style="line-height: 1.5rem;"><input type="checkbox" checked id="filterepic"> Epic</div>
+        <div class="Rare" style="line-height: 1.5rem;"><input type="checkbox" checked id="filterrare"> Rare</div>
+        <div class="Uncommon" style="line-height: 1.5rem;"><input type="checkbox" checked id="filterunc"> Uncommon</div>
+        <div class="Common" style="line-height: 1.5rem;"><input type="checkbox" checked id="filtercomm"> Common</div><br>
+        <div style="line-height: 1.5rem;"><input type="checkbox" checked id="filterreg"> Regular</div>
+        <div style="line-height: 1.5rem;"><input type="checkbox" checked id="filterfast"> Fast</div>
+        <div style="line-height: 1.5rem;"><input type="checkbox" checked id="filterglam"> Glamorous</div>
+        <div style="line-height: 1.5rem;"><input type="checkbox" checked id="filterluck"> Lucky</div>
+        <div style="line-height: 1.5rem;"><input type="checkbox" checked id="filtermag"> Magic</div>
+        <div style="line-height: 1.5rem;"><input type="checkbox" checked id="filterstr"> Strong</div><br>
         <div id="nextleg"></div>
         <div>Your next searches:</div>
         <pre id="result"></pre>

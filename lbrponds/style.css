@@ -24,6 +24,13 @@ input, button, select {
     padding: .25rem;
 }
 
+input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: top;
+    margin: 0 1rem 0 0;
+}
+
 div, pre {
     margin:1rem;
 }
@@ -41,23 +48,23 @@ pre span {
     display: block;
 }
 
-pre span.Legendary {
+.Legendary {
     color: #c90;
 }
 
-pre span.Mythical {
+.Mythical {
     color: #90c;
 }
 
-pre span.Epic {
+.Epic {
     color: #c30;
 }
 
-pre span.Rare {
+.Rare {
     color: #cc0;
 }
 
-pre span.Uncommon {
+.Uncommon {
     color: #09c;
 }
 

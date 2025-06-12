@@ -33,8 +33,6 @@ function render() {
     const goggles = parseInt(document.querySelector('#goggles').value);
     const rescount = parseInt(document.querySelector('#rescount').value);
     const special = document.querySelector('#special').value;
-    const filterrarity = parseInt(document.querySelector('#filterrarity').value) === 1;
-    const filterregular = parseInt(document.querySelector('#filterregular').value) === 1;
 
     for (let i = 0; ; i++) {
         if (window.ponds[i + seed + searches][goggles].match(new RegExp("^Legendary:"+special))) {
@@ -45,11 +43,42 @@ function render() {
 
     var res = window.ponds.slice(seed + searches, rescount + seed + searches).map((v, k) => `<span class="${v[goggles].replace(':', ' ')}">${k + 1} (seed #${seed + searches + k}) - ${v[goggles].replace(':', ' ')}</span>`);
 
-    if (filterrarity) {
-        res = res.filter(v => !v.match(/\<span class="(Uncommon|Common)/));
+    if (!document.querySelector('#filterleg').checked) {
+        res = res.filter(v => !v.match(/\<span class="Legendary/));
     }
-    if (filterregular) {
+    if (!document.querySelector('#filtermyth').checked) {
+        res = res.filter(v => !v.match(/\<span class="Mythical/));
+    }
+    if (!document.querySelector('#filterepic').checked) {
+        res = res.filter(v => !v.match(/\<span class="Epic/));
+    }
+    if (!document.querySelector('#filterrare').checked) {
+        res = res.filter(v => !v.match(/\<span class="Rare/));
+    }
+    if (!document.querySelector('#filterunc').checked) {
+        res = res.filter(v => !v.match(/\<span class="Uncommon/));
+    }
+    if (!document.querySelector('#filtercomm').checked) {
+        res = res.filter(v => !v.match(/\<span class="Common/));
+    }
+
+    if (!document.querySelector('#filterreg').checked) {
         res = res.filter(v => !v.match(/\<span class="\w+ Regular/));
+    }
+    if (!document.querySelector('#filterfast').checked) {
+        res = res.filter(v => !v.match(/\<span class="\w+ Fast/));
+    }
+    if (!document.querySelector('#filterglam').checked) {
+        res = res.filter(v => !v.match(/\<span class="\w+ Glamorous/));
+    }
+    if (!document.querySelector('#filterluck').checked) {
+        res = res.filter(v => !v.match(/\<span class="\w+ Lucky/));
+    }
+    if (!document.querySelector('#filtermag').checked) {
+        res = res.filter(v => !v.match(/\<span class="\w+ Magic/));
+    }
+    if (!document.querySelector('#filterstr').checked) {
+        res = res.filter(v => !v.match(/\<span class="\w+ Strong/));
     }
 
     document.querySelector('#result').innerHTML = res.join("");
