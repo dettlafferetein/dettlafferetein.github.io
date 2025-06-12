@@ -9,6 +9,10 @@ body {
     background-color: #222;
 }
 
+a {
+    color: #09c;
+}
+
 h1 {
     font-family: "Savate", sans-serif;
     text-align: center;
