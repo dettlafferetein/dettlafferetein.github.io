@@ -2,12 +2,20 @@
     <head>
         <title>LBR Pond Seed Stats</title>
         <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
+        <link href="style.css?v2" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
     <body>
         <h1>LBR Pond Seed Stats</h1>
         <div style="text-align: center;"><a href="./">Analyzer</a> | <a href="stats.html">Stats</a></div>
+        <div>Rarity<br><select id="rarity">
+            <option value="Legendary">Legendary</option>
+            <option value="Mythical">Mythical</option>
+            <option value="Epic">Epic</option>
+            <option value="Rare">Rare</option>
+            <option value="Uncommon">Uncommon</option>
+            <option value="Common">Common</option>
+        </select></div>
         <div>Special type<br><select id="special">
             <option value="">Any</option>
             <option value="Fast">Fast</option>
@@ -20,6 +28,6 @@
 
         <div style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result0name"></div><div style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result1name"></div><div style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result2name"></div><div style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result3name"></div><div style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result4name"></div><div style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result5name"></div>
         <pre style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result0"></pre><pre style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result1"></pre><pre style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result2"></pre><pre style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result3"></pre><pre style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result4"></pre><pre style="width:16.66%; display:inline-block; vertical-align: top; margin: 0; padding: 1rem;" id="result5"></pre>
-        <script src="stats.js"></script>
+        <script src="stats.js?v2"></script>
     </body>
 </html>
